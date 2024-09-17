@@ -19,15 +19,11 @@
   <meta name="author" content="zyhfunny">
   <meta name="keywords" content="">
   
-    <meta name="description" content="贪吃蛇 	 	 	 	 	*{margin:0;} 	.map{margin:100px auto; 		height:600px; 		width:900px; 		background:#00D0FF; 		border:10px solid #AFAEB2; 		border-radius:8px; 	} 	             	       &#x2F;&#x2F;获取绘制工具 	&#x2F;* 	var">
-<meta property="og:type" content="website">
-<meta property="og:title" content="page.title">
-<meta property="og:url" content="http://example.com/snake/snake.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="标签 - 打倒极域帝国主义！">
+<meta property="og:url" content="http://example.com/tags/%E6%89%93%E5%80%92%E6%9E%81%E5%9F%9F%E5%B8%9D%E5%9B%BD%E4%B8%BB%E4%B9%89%EF%BC%81/index.html">
 <meta property="og:site_name" content="zyhfunny&#39;blog">
-<meta property="og:description" content="贪吃蛇 	 	 	 	 	*{margin:0;} 	.map{margin:100px auto; 		height:600px; 		width:900px; 		background:#00D0FF; 		border:10px solid #AFAEB2; 		border-radius:8px; 	} 	             	       &#x2F;&#x2F;获取绘制工具 	&#x2F;* 	var">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-09-17T11:39:13.203Z">
-<meta property="article:modified_time" content="2024-09-17T11:31:50.918Z">
 <meta property="article:author" content="zyhfunny">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -35,7 +31,7 @@
   
     <script src="mouse.js"></script>
   
-  <title>page.title - zyhfunny&#39;blog</title>
+  <title>标签 - 打倒极域帝国主义！ - zyhfunny&#39;blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -89,7 +85,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 80vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -195,13 +191,17 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="page.title"></span>
+            <span id="subtitle" data-typed-text="标签 - 打倒极域帝国主义！"></span>
           
         </div>
 
         
       </div>
 
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
       
     </div>
   </div>
@@ -222,202 +222,23 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
-<article class="page-content">
-  <!DOCTYPE html>
-<html>
-<head>
-	<title>贪吃蛇</title>
-	<meta charset="UTF-8">
-	<meta name="keywords" content="贪吃蛇">
-	<meta name="Description" content="这是一个初学者用来学习的小游戏">
-	<style type="text/css">
-	*{margin:0;}
-	.map{margin:100px auto;
-		height:600px;
-		width:900px;
-		background:#00D0FF;
-		border:10px solid #AFAEB2;
-		border-radius:8px;
-	}
-	</style>
- 
- 
- 
-</head>
- 
-<body>
-<div class="map">
-<canvas id="canvas" height="600" width="900">
-	
-</canvas>
-</div>
- 
-<script type="text/javascript">
- //获取绘制工具
-	/*
-	var canvas = document.getElementById("canvas");
-	var ctx = canvas.getContext("2d");//获取上下文
-	ctx.moveTo(0,0);
-	ctx.lineTo(450,450);*/
-	var c=document.getElementById("canvas");
-    var ctx=c.getContext("2d");
-    /*ctx.beginPath();
-    ctx.moveTo(0,0);
-    ctx.lineTo(450,450);
-    ctx.stroke();
-    */
- 
-    var snake =[];//定义一条蛇，画蛇的身体
-    var snakeCount = 6;//初始化蛇的长度
-	var foodx =0;
-	var foody =0;
-    var togo =0;
-    function drawtable()//画地图的函数
-    {
- 
- 
-    	for(var i=0;i<60;i++)//画竖线
-    	{
-    		ctx.strokeStyle="black";
-    		ctx.beginPath();
-    		ctx.moveTo(15*i,0);
-    		ctx.lineTo(15*i,600);
-    		ctx.closePath();
-    		ctx.stroke();
-    	}
-        for(var j=0;j<40;j++)//画横线
-    	{
-    		ctx.strokeStyle="black";
-    		ctx.beginPath();
-    		ctx.moveTo(0,15*j);
-    		ctx.lineTo(900,15*j);
-    		ctx.closePath();
-    		ctx.stroke();
-    	}
-    	
-    	for(var k=0;k<snakeCount;k++)//画蛇的身体
-			{
-			ctx.fillStyle="#000";
-			if (k==snakeCount-1)
-			{
-				ctx.fillStyle="red";//蛇头的颜色与身体区分开
-			}
-			ctx.fillRect(snake[k].x,snake[k].y,15,15);//前两个数是矩形的起始坐标，后两个数是矩形的长宽。
-			
-			}
-			//绘制食物	
-    		ctx.fillStyle ="black";
-	     ctx.fillRect(foodx,foody,15,15);
-	     ctx.fill();
-    	
-    }
- 
-    
-    function start()//定义蛇的坐标
-    {
-    	//var snake =[];//定义一条蛇，画蛇的身体
-        //var snakeCount = 6;//初始化蛇的长度
-		
-		for(var k=0;k<snakeCount;k++)
-    		{
-    			snake[k]={x:k*15,y:0};
-    			
-            }
-			
-		  drawtable();
-          addfood();//在start中调用添加食物函数
- 
-    }
- 
-    function addfood()
-	{
-	foodx = Math.floor(Math.random()*60)*15; //随机产生一个0-1之间的数
-	foody = Math.floor(Math.random()*40)*15;
-		
-		for (var k=0;k<snake;k++)
-		{
-			if (foodx==snake[k].x&&foody==sanke[k].y)//防止产生的随机食物落在蛇身上
-			{	
-			addfood();
-			}
-		}
-	
-	
-	}	
-    		
-   function move()
-   {
-	switch (togo)
-	{
-	case 1: snake.push({x:snake[snakeCount-1].x-15,y:snake[snakeCount-1].y}); break;//向左走
-	case 2: snake.push({x:snake[snakeCount-1].x,y:snake[snakeCount-1].y-15}); break;
-	case 3: snake.push({x:snake[snakeCount-1].x+15,y:snake[snakeCount-1].y}); break;
-	case 4: snake.push({x:snake[snakeCount-1].x,y:snake[snakeCount-1].y+15}); break;
-	case 5: snake.push({x:snake[snakeCount-1].x-15,y:snake[snakeCount-1].y-15}); break;
-	case 6: snake.push({x:snake[snakeCount-1].x+15,y:snake[snakeCount-1].y+15}); break;
-	default: snake.push({x:snake[snakeCount-1].x+15,y:snake[snakeCount-1].y});
-	}
-    snake.shift();//删除数组第一个元素
-   	ctx.clearRect(0,0,900,600);//清除画布重新绘制
-   	isEat();
-	isDead();
-	drawtable();
-   } 			
-   
-   function keydown(e)
-   {
-   switch(e.keyCode)
-		{
-         case 37: togo=1; break;
-		 case 38: togo=2; break;
-		 case 39: togo=3; break;
-		 case 40: togo=4; break;
-		 case 65: togo=5; break;
-		 case 68: togo=6; break;
-		}
-   }
-   
-   function isEat()//吃到食物后长度加1
-   {
-    if(snake[snakeCount-1].x==foodx&&snake[snakeCount-1].y==foody)
-   {
-		addfood();
-		snakeCount++;
-		snake.unshift({x:-15,y:-15});
-   }
-   
-   }
-   
-   function isDead()
-   {
-    if (snake[snakeCount-1].x>885||snake[snakeCount-1].y>585||snake[snakeCount-1].x<0||snake[snakeCount-1].y<0)
-		{
-		alert("You are dead,GAME OVER!!!");
-		window.location.reload();
-		}
-   }
-   
-    document.onkeydown=function(e)
-{
-	keydown(e);
- 
-} 
-window.onload = function()//调用函数
-{ 
-	start();
-	setInterval(move,150);
-	drawtable();
-	
-	
- 
-}
-</script>
-</body>
-</html>
-
+<div class="list-group">
+  <p class="h4">共计 1 篇文章</p>
+  <hr>
   
+  
+    
+      
+      <p class="h5">2024</p>
+    
+    <a href="/2024/09/17/2-1-%E5%B7%B2%E9%80%82%E9%85%8D%E5%AD%A6%E7%94%9F%E6%9C%BA%E6%88%BF%E7%AE%A1%E7%90%86%E5%8A%A9%E6%89%8B7-8-%E6%A8%AA%E6%89%AB%E6%9E%81%E5%9F%9F%EF%BC%8C%E5%81%9A%E5%9B%9E%E8%87%AA%E5%B7%B1%EF%BC%81/" class="list-group-item list-group-item-action">
+      <time>09-17</time>
+      <div class="list-group-item-title">[2.1,已适配学生机房管理助手7.8]横扫极域，做回自己！</div>
+    </a>
+  
+</div>
 
-</article>
+
 
 
 
