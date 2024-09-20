@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>赛前小记</title>
+    <link href="/2024/09/20/%E8%B5%9B%E5%89%8D%E5%B0%8F%E8%AE%B0/"/>
+    <url>/2024/09/20/%E8%B5%9B%E5%89%8D%E5%B0%8F%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[<h1 id="明天就考csp了，感觉还有很多知识点不明白，还是把懂的先写下来。"><a href="#明天就考csp了，感觉还有很多知识点不明白，还是把懂的先写下来。" class="headerlink" title="明天就考csp了，感觉还有很多知识点不明白，还是把懂的先写下来。"></a>明天就考csp了，感觉还有很多知识点不明白，还是把懂的先写下来。</h1><ul><li><p><em>排序：</em><br><strong>冒泡排序是稳定的排序，时间复杂度是O(n^2)。<br>归并排序是不稳定的！不稳定的！时间复杂度是O(n log n)（次次错）<br>选择排序是稳定的，时间复杂度是O(n^2)<br>插入排序是稳定的，时间复杂度是O(n^2)<br>计数排序吧，通过计票的方式确定打印几次</strong>{<br> <em><strong>申请一个数组；<br>输入要排序的数据；<br>如果出现一个数，就把 数组[这个数(下标)]中的职+1；<br>按照数组中这个数出现的次数打印这个数；</strong></em><br>}</p></li><li><p><em>Huffman:</em></p></li></ul><p><strong>这是一种用于编码的算法。</strong><br><strong>哈夫曼树中一个节点的左节点标注为0，右节点标注为1；</strong><br><strong>一个字符的编码是从根节点到表示该字符的节点的最短路径(经过左节点这一位编码为零，右节点编码为1)</strong><br><strong>哈夫曼树中的字符必须是叶子节点；</strong></p><h1 id="终了"><a href="#终了" class="headerlink" title="终了"></a>终了</h1>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>[2.1,已适配学生机房管理助手7.8]横扫极域，做回自己！</title>
     <link href="/2024/09/17/2-1-%E5%B7%B2%E9%80%82%E9%85%8D%E5%AD%A6%E7%94%9F%E6%9C%BA%E6%88%BF%E7%AE%A1%E7%90%86%E5%8A%A9%E6%89%8B7-8-%E6%A8%AA%E6%89%AB%E6%9E%81%E5%9F%9F%EF%BC%8C%E5%81%9A%E5%9B%9E%E8%87%AA%E5%B7%B1%EF%BC%81/"/>
     <url>/2024/09/17/2-1-%E5%B7%B2%E9%80%82%E9%85%8D%E5%AD%A6%E7%94%9F%E6%9C%BA%E6%88%BF%E7%AE%A1%E7%90%86%E5%8A%A9%E6%89%8B7-8-%E6%A8%AA%E6%89%AB%E6%9E%81%E5%9F%9F%EF%BC%8C%E5%81%9A%E5%9B%9E%E8%87%AA%E5%B7%B1%EF%BC%81/</url>
